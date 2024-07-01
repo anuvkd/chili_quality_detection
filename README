@@ -1,0 +1,84 @@
+Chili Quality Detection using CNN
+This Python script uses a convolutional neural network (CNN) implemented with TensorFlow/Keras to detect chili quality grades (Grade1 to Grade4) based on an image dataset. The dataset should be organized into directories for each grade, and the script splits it into training and validation sets, trains the model, and evaluates its performance.
+
+Requirements
+Python 3.x
+TensorFlow 2.x
+scikit-learn (sklearn)
+numpy
+matplotlib (optional for plotting training history)
+Installation
+Clone the Repository:
+
+bash
+Copy code
+git clone https://github.com/anuvkd/chili_quality_detection
+cd repository-directory
+Install Dependencies:
+
+bash
+Copy code
+pip install tensorflow scikit-learn numpy matplotlib
+Dataset Setup
+Download Dataset:
+
+Download the dataset from https://drive.google.com/drive/folders/1_dwy5JSWnpF1mgfY572-SY5JSV1RCAZR?usp=sharing 
+Extract the dataset into a directory (dataset_dir) on your local machine.
+Dataset Structure:
+
+Organize the dataset into subdirectories for each chili grade:
+markdown
+Copy code
+dataset
+├── Grade1
+│   ├── image1.jpg
+│   ├── image2.jpg
+│   └── ...
+├── Grade2
+│   ├── image1.jpg
+│   ├── image2.jpg
+│   └── ...
+├── Grade3
+│   ├── image1.jpg
+│   ├── image2.jpg
+│   └── ...
+└── Grade4
+    ├── image1.jpg
+    ├── image2.jpg
+    └── ...
+Usage
+Run the Script:
+
+Execute the Python script chili_quality_detection.py to train the model and evaluate its performance:
+bash
+Copy code
+python chili_quality_detection.py
+Training:
+
+The script will split the dataset into training and validation sets, train the CNN model, and save the trained model as chili_quality_detection_model.h5.
+Evaluation:
+
+After training, the script evaluates the model's accuracy on the validation set.
+Model Details
+Model Architecture:
+
+The CNN model architecture consists of convolutional layers followed by max pooling, flattening, dense layers, dropout for regularization, and a softmax output layer for classification into 4 grades.
+Training Parameters:
+
+Adjust parameters like batch_size, epochs, and model architecture in chili_quality_detection.py according to your dataset size and computational resources.
+Customization
+Dataset Location:
+
+Update dataset_dir variable in the script to point to your dataset directory if it differs from the default path.
+Model Architecture:
+
+Modify the CNN architecture (model variable in the script) to experiment with different layers and configurations.
+Notes
+Performance:
+
+Ensure sufficient system resources (CPU/GPU) for training CNN models, especially with larger datasets.
+Extension:
+
+Extend the script to include data augmentation, fine-tuning, or transfer learning for improved performance.
+License
+Include details about the license for your code if applicable.
